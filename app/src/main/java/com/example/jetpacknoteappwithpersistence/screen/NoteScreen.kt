@@ -122,10 +122,10 @@ fun NoteRow(modifier: Modifier = Modifier, note: Note, onNoteClicked: (Note) -> 
         ) {
             Text(text = note.title, style = MaterialTheme.typography.titleSmall)
             Text(text = note.description, style = MaterialTheme.typography.titleMedium)
-            Text(
+            /*Text(
                 text = note.entryDate.format(DateTimeFormatter.ofPattern("EEE, d MMM")),
                 style = MaterialTheme.typography.labelSmall
-            )
+            )*/
 
         }
     }
