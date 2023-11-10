@@ -2,7 +2,7 @@ package com.example.jetpacknoteappwithpersistence.screen
 
 import androidx.compose.runtime.mutableStateListOf
 import androidx.lifecycle.ViewModel
-import com.example.jetpacknoteappwithpersistence.data.Note
+import com.example.jetpacknoteappwithpersistence.model.Note
 import com.example.jetpacknoteappwithpersistence.data.NoteDataSource
 
 class NoteViewModel : ViewModel() {

@@ -34,7 +34,7 @@ import androidx.compose.ui.unit.dp
 import com.example.jetpacknoteappwithpersistence.R
 import com.example.jetpacknoteappwithpersistence.components.NoteButton
 import com.example.jetpacknoteappwithpersistence.components.NoteInputText
-import com.example.jetpacknoteappwithpersistence.data.Note
+import com.example.jetpacknoteappwithpersistence.model.Note
 import com.example.jetpacknoteappwithpersistence.data.NoteDataSource
 import java.time.format.DateTimeFormatter
 
@@ -74,14 +74,14 @@ fun NoteScreen(
                 text = title,
                 label = "Title",
                 onTextChange = {
-                    if (it.all { char -> char.isLetter() || char.isWhitespace() }) title = it
+                    if (it.all { char -> char.isLetterOrDigit() || char.isWhitespace() }) title = it
                 })
             NoteInputText(
                 modifier = Modifier.padding(top = 9.dp, bottom = 8.dp),
                 text = description,
                 label = "Description",
                 onTextChange = {
-                    if (it.all { char -> char.isLetter() || char.isWhitespace() }) description = it
+                    if (it.all { char -> char.isLetterOrDigit() || char.isWhitespace() }) description = it
                 })
             NoteButton(text = "Save", onClick = {
                 if (title.isNotEmpty() && description.isNotEmpty()) {
