@@ -1,5 +1,7 @@
 package com.example.jetpacknoteappwithpersistence.data
 
+import com.example.jetpacknoteappwithpersistence.model.Note
+
 class NoteDataSource {
     fun loadNotes(): List<Note> {
         return listOf(
