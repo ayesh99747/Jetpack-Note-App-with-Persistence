@@ -8,6 +8,10 @@ import kotlinx.coroutines.flow.conflate
 import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 
+/**
+ * Single source of truth for all app data.
+ * This is a clean API for the UI to communicate with.
+ */
 class NoteRepository @Inject constructor(private val noteDatabaseDao: NoteDatabaseDao) {
     suspend fun addNote(note: Note) = noteDatabaseDao.insert(note = note)
 

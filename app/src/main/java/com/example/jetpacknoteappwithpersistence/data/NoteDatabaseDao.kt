@@ -9,6 +9,9 @@ import androidx.room.Update
 import com.example.jetpacknoteappwithpersistence.model.Note
 import kotlinx.coroutines.flow.Flow
 
+/**
+ * The DAO Manages local data from the SQLite data source using objects.
+ */
 @Dao
 interface NoteDatabaseDao {
 

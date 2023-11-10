@@ -36,6 +36,7 @@ import com.example.jetpacknoteappwithpersistence.components.NoteButton
 import com.example.jetpacknoteappwithpersistence.components.NoteInputText
 import com.example.jetpacknoteappwithpersistence.model.Note
 import com.example.jetpacknoteappwithpersistence.data.NoteDataSource
+import com.example.jetpacknoteappwithpersistence.util.formatDate
 import java.time.format.DateTimeFormatter
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -122,10 +123,10 @@ fun NoteRow(modifier: Modifier = Modifier, note: Note, onNoteClicked: (Note) -> 
         ) {
             Text(text = note.title, style = MaterialTheme.typography.titleSmall)
             Text(text = note.description, style = MaterialTheme.typography.titleMedium)
-            /*Text(
-                text = note.entryDate.format(DateTimeFormatter.ofPattern("EEE, d MMM")),
+            Text(
+                text = formatDate(note.entryDate.time),
                 style = MaterialTheme.typography.labelSmall
-            )*/
+            )
 
         }
     }
